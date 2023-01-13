@@ -1,0 +1,114 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#edit-row{
+cursor: pointer;
+}
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  width: 100%;
+}
+
+thead tr {
+  background-color: #0E473F;
+  color: #ffffff;
+  text-align: left;
+}
+
+
+.home-container{
+  width: auto;
+  border-radius:2px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 5px;
+
+}
+
+.pagination{
+  justify-content: center;
+  text-align: center;
+  color:#0E473F;
+  font-size: 38px;
+  padding:20px;  
+}
+
+#prev-icon{
+  margin-right:30px;
+  cursor: pointer;
+}
+
+#next-icon{
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style:hidden;
+  background-color:transparent;
+  width: 100%;
+}
+
+
+/* input:focus{
+  outline: none;
+} */
+
+.no-outline:focus {
+  outline: none;
+}
+
+::placeholder {
+  font-family: arial, sans-serif;
+  font-weight:bold;
+  
+  
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: arial, sans-serif;
+  font-weight:bold;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-family: arial, sans-serif;
+  font-weight:bold;
+}
+
+#edit{
+  cursor: pointer;
+}
+
+
+#bio{
+  height: 100%;
+}
+#bio-head{
+  text-align: center;
+}
+
+.spin{
+  align-items: center;
+  text-align: center;
+}
