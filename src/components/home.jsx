@@ -18,6 +18,7 @@ const dispatch = useDispatch();
 
   //api call
   const getRecords = ()=>{
+    
     api.records.display().then((res)=>{
       if(res.status===200){
         //update store the global store with data from api
@@ -80,6 +81,9 @@ const [editedRecords, setValues] = useState({
 });
 
 const switchMode=(e)=>{
+     //end point not there
+     return message.warning('END POINT NOT PROVIDED NOW!!!');
+
     setEditMode(true);
     message.warning("click on individual  cell to edit  and click save ");
     //get _di of record clicked to my object

@@ -4,7 +4,7 @@
 ## to run the app 
 
 #### clone app
-#### create .env file like .env.example and provide API url and key
+#### create .env file like .env.example and provide API url and key maintain the variable names
 #### run `nmp or yarn intall `
 #### `npm start`
 
