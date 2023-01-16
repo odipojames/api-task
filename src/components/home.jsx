@@ -84,10 +84,10 @@ const switchMode=(e)=>{
      //end point not there
      return message.warning('END POINT NOT PROVIDED NOW!!!');
 
-    setEditMode(true);
-    message.warning("click on individual  cell to edit  and click save ");
+    //setEditMode(true);
+    //message.warning("click on individual  cell to edit  and click save ");
     //get _di of record clicked to my object
-    editedRecords._id=e.currentTarget.getAttribute('name');
+    //editedRecords._id=e.currentTarget.getAttribute('name');
 };
 
 //get objetect to be updated
