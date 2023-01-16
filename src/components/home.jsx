@@ -38,6 +38,8 @@ const dispatch = useDispatch();
 
 //getting records from global store now
   const records= useSelector(state => state.records.records);
+
+  console.log(records,'records');
   
 
   useEffect(()=>{
@@ -82,16 +84,18 @@ const [editedRecords, setValues] = useState({
 
 const switchMode=(e)=>{
      //end point not there
-     return message.warning('END POINT NOT PROVIDED NOW!!!');
+     //return message.warning('END POINT NOT PROVIDED NOW!!!');
 
-    //setEditMode(true);
-    //message.warning("click on individual  cell to edit  and click save ");
+    setEditMode(true);
+    message.warning("click on individual  cell to edit  and click save ");
     //get _di of record clicked to my object
-    //editedRecords._id=e.currentTarget.getAttribute('name');
+    editedRecords.id=e.currentTarget.getAttribute('name');
+    
 };
 
 //get objetect to be updated
-const recordToUpDate = records.find(x => x._id === editedRecords._id);
+// eslint-disable-next-line
+const recordToUpDate = records.find(x => x.id == editedRecords.id);
 console.log(recordToUpDate,'rt')
 
 const editHandler = (e) => {
@@ -102,6 +106,7 @@ const editHandler = (e) => {
 };
 
 //api call
+// eslint-disable-next-line
 const editRecord = ()=>{
   //prepopulate fields with initial data
   if(editedRecords.name===""){
@@ -125,7 +130,7 @@ const editRecord = ()=>{
       
     }
     else{
-      return message.warning('something went wrong try again latet');
+      return message.warning('something went wrong try again later');
     }
    }).catch((error)=>{
     if(error){
@@ -166,12 +171,12 @@ const antIcon = (
   </thead>
   <tbody>
     {records.slice(startIndex,endIndex).map((record)=>(
-<tr key={record._id}>
+<tr key={record.id}>
 <td>{record.name}</td>
 <td>{record.email}</td>
 <td>{record.occupation}</td>
 <td> {record.bio} </td>
-<td id='edit' onClick={switchMode} name={record._id}>edit</td>
+<td id='edit' onClick={switchMode} name={record.id}>edit</td>
 </tr>))}
 </tbody>
 </table>
@@ -194,7 +199,7 @@ const antIcon = (
 <td>< input type='text' name='email' placeholder={recordToUpDate.email} onChange={editHandler} /></td>
 <td>< input type='text' name='occupation'  placeholder={recordToUpDate.occupation} onChange={editHandler} /></td>
 <td>< input type='text' name='bio' placeholder={recordToUpDate.bio} onChange={editHandler} /></td>
-<td id='edit' onClick={editRecord}>{loading?(<Spin indicator={antIcon} tip='..saving' />):("save")}</td>
+<td id='edit' onClick={()=>{message.warning("END POINT NOT YET PROVIDED!!")}}>{loading?(<Spin indicator={antIcon} tip='..saving' />):("save")}</td>
 </tr>
 </tbody>
 </table>

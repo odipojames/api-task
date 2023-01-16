@@ -17,7 +17,7 @@ axios.defaults.headers['X-API-KEY'] = key;
 export const api ={
     records:{
         display: () => axios.get(`${API_HOST}/users`),
-        edit:(data) => axios.patch(`${API_HOST}/sample/${data._id}`,data),
+        edit:(data) => axios.patch(`${API_HOST}/users/${data.id}`,data),
     },
     
    
