@@ -112,3 +112,9 @@ input {
   align-items: center;
   text-align: center;
 }
+
+#bio-data{
+  width:fit-content;
+  height: fit-content;
+  
+}
