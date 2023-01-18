@@ -211,7 +211,7 @@ const antIcon = (
 <td>< input type='text' name='name' placeholder={userToUpdate.name} onChange={editHandler} /></td>
 <td>< input type='text' name='email' placeholder={userToUpdate.email} onChange={editHandler} /></td>
 <td>< input type='text' name='occupation'  placeholder={userToUpdate.occupation} onChange={editHandler} /></td>
-<td>< input type='text' name='bio' placeholder={userToUpdate.bio} onChange={editHandler} /></td>
+<td>< input type='text' name='bio' placeholder={userToUpdate.bio} onChange={editHandler}/></td>
 <td id='edit' onClick={editRecord}>{loading?(<Spin indicator={antIcon} tip='..saving' />):("save")}</td>
 </tr>
 </tbody>

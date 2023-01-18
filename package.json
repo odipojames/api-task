@@ -1,7 +1,6 @@
 {
   "name": "ampath-task",
   "version": "0.1.0",
-  "homepage": "http://odipojames.github.io/api-task",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.8.0",
@@ -26,9 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -47,8 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }

@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-
 //get enviroment variables
-const API_HOST=process.env.REACT_APP_BASE_URL ||'https://us-central1-ti-reactjs-test.cloudfunctions.net/app/api';
+//const API_HOST=process.env.REACT_APP_BASE_URL;
+//const key=process.env.REACT_APP_X_API_KEY 
 
-const key=process.env.REACT_APP_X_API_KEY || '63be7360969f06502871ad7f';
+const API_HOST='https://us-central1-ti-reactjs-test.cloudfunctions.net/app/api';
+const key='63be7360969f06502871ad7f';
 
  
 
