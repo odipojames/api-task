@@ -189,7 +189,7 @@ const antIcon = (
 <td>{record.email}</td>
 <td>{record.occupation}</td>
 <td> {record.bio} </td>
-<td id='edit' onClick={getUser} name={record.id}>edit</td>
+<td id='edit' ><button name={record.id} onClick={getUser}>edit</button></td>
 </tr>))}
 </tbody>
 </table>
