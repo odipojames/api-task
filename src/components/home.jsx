@@ -71,6 +71,8 @@ const[editMode,setEditMode] = useState(false);
 const[userId,setUserId]=useState("");
 
 const[userToUpdate,setUserToUpdate]=useState({});
+
+
 const getUser = (e)=>{
   //api call
   setUserId(e.currentTarget.getAttribute('name'));
@@ -208,10 +210,10 @@ const antIcon = (
   <tbody>
     
 <tr id="edit-row">
-<td>< input type='text' name='name' placeholder={userToUpdate.name} onChange={editHandler} /></td>
-<td>< input type='text' name='email' placeholder={userToUpdate.email} onChange={editHandler} /></td>
-<td>< input type='text' name='occupation'  placeholder={userToUpdate.occupation} onChange={editHandler} /></td>
-<td>< input type='text' name='bio' placeholder={userToUpdate.bio} onChange={editHandler}/></td>
+<td>< input type='text' name='name' defaultValue={userToUpdate.name} onChange={editHandler} /></td>
+<td>< input type='text' name='email' defaultValue={userToUpdate.email} onChange={editHandler} /></td>
+<td>< input type='text' name='occupation'  defaultValue={userToUpdate.occupation} onChange={editHandler} /></td>
+<td>< input type='text' name='bio' defaultValue={userToUpdate.bio} onChange={editHandler}/></td>
 <td id='edit' onClick={editRecord}>{loading?(<Spin indicator={antIcon} tip='..saving' />):("save")}</td>
 </tr>
 </tbody>
